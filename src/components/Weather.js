@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import './Weather.css';
 
 function Weather() {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState();
     const [search, setSearch] = useState("Pune");
     const [city, setCity] = useState("");
 
@@ -16,27 +17,49 @@ function Weather() {
     }, [search]);
 
     return (
-        data && (
-            <div>
-                <input 
-                    type='text' 
-                    value={city} 
-                    onChange={(event) => setCity(event.target.value)}
+        <div className="weather-container">
+            {/* Search Bar */}
+            <div className="search-box">
+                <input
+                    type="text"
                     placeholder="Enter city name"
+                    onChange={(event) => setCity(event.target.value)}
                 />
                 <button onClick={() => setSearch(city)}>Search</button>
-                {data.main && (
-                    <div>
-                        <h2>City: {data.name}, {data.sys?.country}</h2>
-                        <h3>Date: {new Date().toLocaleDateString()}</h3>
-                        <h3>Temperature: {data.main.temp}°C</h3>
-                        <h3>Condition: {data.weather[0].description}</h3>
-                        <h3>Humidity: {data.main.humidity}%</h3>
-                        <h3>Wind Speed: {data.wind.speed} m/s</h3>
-                    </div>
-                )}
             </div>
-        )
+
+            {/* Weather Box */}
+            {data && (
+                <div className="weather-box">
+                    <div className="upper-section">
+                        <div className="top-left">
+                            <h2 className="city">{data.name}</h2>
+                            <p className="date">{new Date().toDateString()}</p>
+                            <div className="icon-container">
+                                <img
+                                    src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+                                    alt={data.weather[0].description}
+                                    className="weather-icon"
+                                />
+                                <p className="weather-condition">{data.weather[0].description}</p>
+                            </div>
+                        </div>
+                        <h2 className="temperature">{data.main.temp}°C</h2>
+                    </div>
+
+                    <div className="lower-section">
+                        <div className="info-box">
+                            <p>Humidity</p>
+                            <h3>{data.main.humidity}%</h3>
+                        </div>
+                        <div className="info-box">
+                            <p>Wind</p>
+                            <h3>{data.wind.speed} m/s</h3>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
     );
 }
 

@@ -1,0 +1,174 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+}
+
+
+.search-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    
+} 
+
+.search-box input {
+    width: 250px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    outline: none;
+    color: black;
+    font-size: 14px;
+    
+}
+
+
+
+.search-box input:focus {
+    transform: scale(1.05);
+}
+
+.search-box button {
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-box button:hover {
+    background: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.weather-box {
+    width: 380px;
+    border: 3px solid #4d0e86; 
+    border-radius: 16px;
+    overflow: hidden;
+    background: #430c74;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.upper-section {
+    position: relative;
+    height: 180px;
+    background: linear-gradient(135deg, #fbf7fe, #2563eb);
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    padding: 20px;
+}
+
+
+.top-left {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+
+.city {
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1f1f1f;
+}
+
+.date {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+.temperature {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    font-size: 38px;
+    font-weight: bold;
+    color: black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.temperature:hover {
+    transform: scale(1.1);
+}
+
+
+.lower-section {
+    display: flex;
+    justify-content: space-around;
+    background: #571098;
+    padding: 20px;
+}
+
+
+.info-box {
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    font-weight: bold;
+    width: 100px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+    transform: scale(1.1);
+}
+
+
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.weather-condition {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    
+}
+
+
