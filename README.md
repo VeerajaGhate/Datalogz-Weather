@@ -4,7 +4,7 @@ A **modern and user-friendly Weather App** built with **React** and styled using
 
 ## Key Features  
 
-*Real-time Weather Data** – Fetches live weather conditions, including temperature, description, and icons.  
+**Real-time Weather Data** – Fetches live weather conditions, including temperature, description, and icons.  
 **Smart Search Functionality** – Easily look up any city’s weather with an optimized search experience.  
 **Instant Validation & Error Handling** – Handles incorrect city names, empty inputs, and API errors gracefully.  
 **Clean & Responsive UI** – Fully styled with **Tailwind CSS**, ensuring a modern and adaptive design.  
@@ -20,17 +20,21 @@ A **modern and user-friendly Weather App** built with **React** and styled using
 
 ##  Installation & Setup  
 
-1. **Clone the repository**  
+1. **Clone the repository**
+   ```
    git clone https://github.com/VeerajaGhate/Datalogz-Weather.git
    cd weather-app
 
-2. **Install dependencies**  
+3. **Install dependencies**
+   ```
    npm install
 
-3. **Start the development server**  
+5. **Start the development server**
+   ```
    npm start
 
-4. **Open in Browser**  
+7. **Open in Browser**
+   ```
    Visit: http://localhost:3000/
 
 ## How to Use
