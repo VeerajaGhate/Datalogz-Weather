@@ -25,6 +25,13 @@ A **modern and user-friendly Weather App** built with **React** and styled using
    git clone https://github.com/VeerajaGhate/Datalogz-Weather.git
    cd weather-app
 
+2. **Set up the .env file**
+   - Create a new file named .env in the root of the project directory.
+   - Add your OpenWeatherMap API key to the .env file
+   ```
+   REACT_APP_API_KEY=your_openweathermap_api_key_here
+
+
 3. **Install dependencies**
    ```
    npm install

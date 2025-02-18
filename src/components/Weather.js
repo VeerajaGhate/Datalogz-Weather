@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 function Weather() {
+    const apiKey = process.env.REACT_APP_API_KEY;
     const [data, setData] = useState(); //Response container
     const [search, setSearch] = useState("Pune"); //Complete city name to search
     const [city, setCity] = useState(""); //Capturing input from search bar
@@ -10,7 +11,7 @@ function Weather() {
         const fetchApi = async () => {
             if (search && !error) { // Validity check before API Call  
                 try {
-                    const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=39e6c5c1de59ad645db3e661147127e8`;
+                    const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${apiKey}`;
                     const response = await fetch(url);
                     const result = await response.json();
                     
